@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "impicched_graficas/1.0.0": {
+        "runtime": {
+          "impicched_graficas.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "impicched_graficas/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
