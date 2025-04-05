@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lleshi.alessandro\\Desktop\\impicched_graficas\\impicched_graficas\\impicched_graficas.csproj": {}
+    "C:\\Users\\lleshi.alessandro\\Desktop\\impicched_grafics\\impicched_graficas\\impicched_graficas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lleshi.alessandro\\Desktop\\impicched_graficas\\impicched_graficas\\impicched_graficas.csproj": {
+    "C:\\Users\\lleshi.alessandro\\Desktop\\impicched_grafics\\impicched_graficas\\impicched_graficas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lleshi.alessandro\\Desktop\\impicched_graficas\\impicched_graficas\\impicched_graficas.csproj",
+        "projectUniqueName": "C:\\Users\\lleshi.alessandro\\Desktop\\impicched_grafics\\impicched_graficas\\impicched_graficas.csproj",
         "projectName": "impicched_graficas",
-        "projectPath": "C:\\Users\\lleshi.alessandro\\Desktop\\impicched_graficas\\impicched_graficas\\impicched_graficas.csproj",
+        "projectPath": "C:\\Users\\lleshi.alessandro\\Desktop\\impicched_grafics\\impicched_graficas\\impicched_graficas.csproj",
         "packagesPath": "C:\\Users\\lleshi.alessandro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lleshi.alessandro\\Desktop\\impicched_graficas\\impicched_graficas\\obj\\",
+        "outputPath": "C:\\Users\\lleshi.alessandro\\Desktop\\impicched_grafics\\impicched_graficas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lleshi.alessandro\\AppData\\Roaming\\NuGet\\NuGet.Config",

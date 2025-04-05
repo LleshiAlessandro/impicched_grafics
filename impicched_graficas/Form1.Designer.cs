@@ -36,7 +36,6 @@
             argomento_label = new Label();
             punteggio_label = new Label();
             punteggio = new TextBox();
-            normale = new Button();
             animali = new Button();
             cibi = new Button();
             lavori = new Button();
@@ -46,6 +45,7 @@
             difficolta_label = new Label();
             label6 = new Label();
             parola_nascosta = new Label();
+            lista = new ListBox();
             SuspendLayout();
             // 
             // parola
@@ -88,13 +88,14 @@
             lettera_label.Size = new Size(144, 21);
             lettera_label.TabIndex = 3;
             lettera_label.Text = "inserisci la lettera";
+            lettera_label.Click += lettera_label_Click;
             // 
             // argomento_label
             // 
             argomento_label.AutoSize = true;
             argomento_label.BackColor = Color.LightSkyBlue;
             argomento_label.Font = new Font("Showcard Gothic", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            argomento_label.Location = new Point(203, 252);
+            argomento_label.Location = new Point(218, 252);
             argomento_label.Name = "argomento_label";
             argomento_label.Size = new Size(414, 27);
             argomento_label.TabIndex = 4;
@@ -118,96 +119,88 @@
             punteggio.Size = new Size(33, 23);
             punteggio.TabIndex = 6;
             // 
-            // normale
-            // 
-            normale.BackColor = Color.LightSkyBlue;
-            normale.Location = new Point(218, 282);
-            normale.MinimumSize = new Size(60, 60);
-            normale.Name = "normale";
-            normale.Size = new Size(75, 60);
-            normale.TabIndex = 7;
-            normale.Text = "normale";
-            normale.UseVisualStyleBackColor = false;
-            normale.Click += button1_Click;
-            // 
             // animali
             // 
             animali.BackColor = Color.LightSkyBlue;
-            animali.Location = new Point(311, 282);
+            animali.Location = new Point(291, 282);
             animali.MinimumSize = new Size(60, 60);
             animali.Name = "animali";
             animali.Size = new Size(75, 60);
             animali.TabIndex = 8;
             animali.Text = "animali";
             animali.UseVisualStyleBackColor = false;
-            animali.Click += button2_Click;
+            animali.Click += animali_Click;
             // 
             // cibi
             // 
             cibi.BackColor = Color.LightSkyBlue;
-            cibi.Location = new Point(405, 282);
+            cibi.Location = new Point(387, 282);
             cibi.MinimumSize = new Size(60, 60);
             cibi.Name = "cibi";
             cibi.Size = new Size(75, 60);
             cibi.TabIndex = 9;
             cibi.Text = "cibi";
             cibi.UseVisualStyleBackColor = false;
+            cibi.Click += cibi_Click;
             // 
             // lavori
             // 
             lavori.BackColor = Color.LightSkyBlue;
-            lavori.Location = new Point(502, 282);
+            lavori.Location = new Point(493, 282);
             lavori.MinimumSize = new Size(60, 60);
             lavori.Name = "lavori";
             lavori.Size = new Size(75, 60);
             lavori.TabIndex = 10;
             lavori.Text = "lavori";
             lavori.UseVisualStyleBackColor = false;
+            lavori.Click += lavori_Click;
             // 
             // facile
             // 
             facile.BackColor = Color.LightSkyBlue;
-            facile.Location = new Point(137, 382);
+            facile.Location = new Point(291, 382);
             facile.MinimumSize = new Size(60, 60);
             facile.Name = "facile";
             facile.Size = new Size(75, 60);
             facile.TabIndex = 11;
             facile.Text = "facile";
             facile.UseVisualStyleBackColor = false;
-            facile.Click += button5_Click;
+            facile.Click += facile_Click_1;
             // 
             // medio
             // 
             medio.BackColor = Color.LightSkyBlue;
-            medio.Location = new Point(218, 382);
+            medio.Location = new Point(387, 382);
             medio.MinimumSize = new Size(60, 60);
             medio.Name = "medio";
             medio.Size = new Size(75, 60);
             medio.TabIndex = 12;
             medio.Text = "medio";
             medio.UseVisualStyleBackColor = false;
+            medio.Click += medio_Click_1;
             // 
             // difficile
             // 
             difficile.BackColor = Color.LightSkyBlue;
-            difficile.Location = new Point(299, 382);
+            difficile.Location = new Point(493, 382);
             difficile.MinimumSize = new Size(60, 60);
             difficile.Name = "difficile";
             difficile.Size = new Size(75, 60);
             difficile.TabIndex = 13;
             difficile.Text = "difficile";
             difficile.UseVisualStyleBackColor = false;
+            difficile.Click += difficile_Click_1;
             // 
             // difficolta_label
             // 
             difficolta_label.AutoSize = true;
             difficolta_label.BackColor = Color.LightSkyBlue;
             difficolta_label.Font = new Font("Showcard Gothic", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            difficolta_label.Location = new Point(46, 359);
+            difficolta_label.Location = new Point(145, 359);
             difficolta_label.Name = "difficolta_label";
-            difficolta_label.Size = new Size(449, 20);
+            difficolta_label.Size = new Size(595, 20);
             difficolta_label.TabIndex = 14;
-            difficolta_label.Text = "scegli la difficoltà per la miodalità normale";
+            difficolta_label.Text = "scegli la difficoltà per la miodalità con parole randomiche";
             difficolta_label.Click += label5_Click;
             // 
             // label6
@@ -232,7 +225,20 @@
             parola_nascosta.Size = new Size(346, 33);
             parola_nascosta.TabIndex = 16;
             parola_nascosta.Text = "la parola nascosta è :";
+            parola_nascosta.TextAlign = ContentAlignment.MiddleCenter;
             parola_nascosta.Click += label7_Click;
+            // 
+            // lista
+            // 
+            lista.BackColor = Color.LightSkyBlue;
+            lista.ForeColor = SystemColors.WindowText;
+            lista.FormattingEnabled = true;
+            lista.ItemHeight = 15;
+            lista.Location = new Point(12, 150);
+            lista.Name = "lista";
+            lista.Size = new Size(120, 94);
+            lista.TabIndex = 17;
+            lista.SelectedIndexChanged += lista_SelectedIndexChanged;
             // 
             // Form1
             // 
@@ -241,6 +247,7 @@
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(800, 450);
+            Controls.Add(lista);
             Controls.Add(parola_nascosta);
             Controls.Add(label6);
             Controls.Add(difficolta_label);
@@ -250,7 +257,6 @@
             Controls.Add(lavori);
             Controls.Add(cibi);
             Controls.Add(animali);
-            Controls.Add(normale);
             Controls.Add(punteggio);
             Controls.Add(punteggio_label);
             Controls.Add(argomento_label);
@@ -274,7 +280,6 @@
         private Label argomento_label;
         private Label punteggio_label;
         private TextBox punteggio;
-        private Button normale;
         private Button animali;
         private Button cibi;
         private Button lavori;
@@ -284,5 +289,6 @@
         private Label difficolta_label;
         private Label label6;
         private Label parola_nascosta;
+        private ListBox lista;
     }
 }
