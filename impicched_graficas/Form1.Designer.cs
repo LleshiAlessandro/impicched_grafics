@@ -46,6 +46,8 @@
             label6 = new Label();
             parola_nascosta = new Label();
             lista = new ListBox();
+            vite = new Label();
+            invio = new Button();
             SuspendLayout();
             // 
             // parola
@@ -234,11 +236,34 @@
             lista.ForeColor = SystemColors.WindowText;
             lista.FormattingEnabled = true;
             lista.ItemHeight = 15;
-            lista.Location = new Point(12, 150);
+            lista.Location = new Point(12, 100);
             lista.Name = "lista";
             lista.Size = new Size(120, 94);
             lista.TabIndex = 17;
             lista.SelectedIndexChanged += lista_SelectedIndexChanged;
+            // 
+            // vite
+            // 
+            vite.AutoSize = true;
+            vite.BackColor = Color.LightSkyBlue;
+            vite.Location = new Point(654, 100);
+            vite.MinimumSize = new Size(50, 60);
+            vite.Name = "vite";
+            vite.Size = new Size(86, 60);
+            vite.TabIndex = 18;
+            vite.Text = "essenza di defe";
+            vite.Click += vite_Click;
+            // 
+            // invio
+            // 
+            invio.BackColor = Color.LightSkyBlue;
+            invio.Location = new Point(218, 226);
+            invio.Name = "invio";
+            invio.Size = new Size(79, 23);
+            invio.TabIndex = 19;
+            invio.Text = "invio";
+            invio.UseVisualStyleBackColor = false;
+            invio.Click += invio_Click;
             // 
             // Form1
             // 
@@ -247,6 +272,8 @@
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(800, 450);
+            Controls.Add(invio);
+            Controls.Add(vite);
             Controls.Add(lista);
             Controls.Add(parola_nascosta);
             Controls.Add(label6);
@@ -290,5 +317,7 @@
         private Label label6;
         private Label parola_nascosta;
         private ListBox lista;
+        private Label vite;
+        private Button invio;
     }
 }
