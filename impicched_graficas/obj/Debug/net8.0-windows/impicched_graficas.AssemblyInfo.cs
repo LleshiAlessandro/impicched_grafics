@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("impicched_graficas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+841c07109aa716b8df885e158c8d8416d753ff04")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f39e0fbac78ed03f26d86a4e40aadab4d5cd5578")]
 [assembly: System.Reflection.AssemblyProductAttribute("impicched_graficas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("impicched_graficas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

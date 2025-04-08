@@ -47,7 +47,13 @@
             parola_nascosta = new Label();
             lista = new ListBox();
             vite = new Label();
+            button1 = new Button();
             invio = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // parola
@@ -221,12 +227,12 @@
             parola_nascosta.AutoSize = true;
             parola_nascosta.BackColor = Color.LightSkyBlue;
             parola_nascosta.Font = new Font("Showcard Gothic", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            parola_nascosta.Location = new Point(231, 100);
-            parola_nascosta.MinimumSize = new Size(104, 0);
+            parola_nascosta.Location = new Point(233, 125);
+            parola_nascosta.MinimumSize = new Size(350, 35);
             parola_nascosta.Name = "parola_nascosta";
-            parola_nascosta.Size = new Size(346, 33);
+            parola_nascosta.Size = new Size(350, 35);
             parola_nascosta.TabIndex = 16;
-            parola_nascosta.Text = "la parola nascosta è :";
+            parola_nascosta.Text = " ";
             parola_nascosta.TextAlign = ContentAlignment.MiddleCenter;
             parola_nascosta.Click += label7_Click;
             // 
@@ -254,6 +260,17 @@
             vite.Text = "essenza di defe";
             vite.Click += vite_Click;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.LightSkyBlue;
+            button1.Location = new Point(363, 226);
+            button1.Name = "button1";
+            button1.Size = new Size(79, 23);
+            button1.TabIndex = 20;
+            button1.Text = "invio parola";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // invio
             // 
             invio.BackColor = Color.LightSkyBlue;
@@ -261,9 +278,70 @@
             invio.Name = "invio";
             invio.Size = new Size(79, 23);
             invio.TabIndex = 19;
-            invio.Text = "invio";
+            invio.Text = "invio lettera";
             invio.UseVisualStyleBackColor = false;
             invio.Click += invio_Click;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.LightSkyBlue;
+            button3.Location = new Point(12, 301);
+            button3.Name = "button3";
+            button3.Size = new Size(79, 23);
+            button3.TabIndex = 22;
+            button3.Text = "jolly";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.LightSkyBlue;
+            button4.Location = new Point(661, 252);
+            button4.Name = "button4";
+            button4.Size = new Size(79, 23);
+            button4.TabIndex = 23;
+            button4.Text = "nuova P";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.LightSkyBlue;
+            button5.Location = new Point(661, 301);
+            button5.Name = "button5";
+            button5.Size = new Size(79, 23);
+            button5.TabIndex = 24;
+            button5.Text = "chiudi";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.LightSkyBlue;
+            label1.Font = new Font("Showcard Gothic", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.Location = new Point(233, 83);
+            label1.MinimumSize = new Size(350, 35);
+            label1.Name = "label1";
+            label1.Size = new Size(350, 35);
+            label1.TabIndex = 25;
+            label1.Text = "la parola nascosta è :";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            label1.Click += label1_Click_1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.LightSkyBlue;
+            label2.Font = new Font("Showcard Gothic", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label2.Location = new Point(97, 294);
+            label2.MinimumSize = new Size(35, 35);
+            label2.Name = "label2";
+            label2.Size = new Size(177, 35);
+            label2.TabIndex = 26;
+            label2.Text = "la lettera jolly è :";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.Click += label2_Click;
             // 
             // Form1
             // 
@@ -272,6 +350,12 @@
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(button5);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button1);
             Controls.Add(invio);
             Controls.Add(vite);
             Controls.Add(lista);
@@ -318,6 +402,12 @@
         private Label parola_nascosta;
         private ListBox lista;
         private Label vite;
+        private Button button1;
         private Button invio;
+        private Button button3;
+        private Button button4;
+        private Button button5;
+        private Label label1;
+        private Label label2;
     }
 }
