@@ -13,7 +13,7 @@ namespace impicched_graficas
         string filePath = "";
         char f = ' ';
         string jolly = " ";
-        int jollyUsato = 1;
+        int jollyUsato = 2;
         void lettura(string filePath, int tentativi)
         {
             string[] lines = File.ReadAllLines(filePath); // Legge tutte le righe e le mette in un vettore
@@ -31,6 +31,7 @@ namespace impicched_graficas
             if (parola.Text == parolaScelta)
             {
                 trattino = parola.Text;
+                label3.Text = (20).ToString();
             }
             else
             {
@@ -38,6 +39,7 @@ namespace impicched_graficas
                 if (tentativi <= 0)
                 {
                     MessageBox.Show("hai esaurito le vite hai perso");
+                    Application.Exit();
                 }
             }
             vite.Text = tentativi.ToString();
@@ -54,8 +56,11 @@ namespace impicched_graficas
                     if (f == parolaScelta[i])
                     {
                         a[i] = parolaScelta[i];
+                        for (int j = 0; j < trattino.Length; j++)
+                        {
+                            label3.Text = (1 + 1).ToString();
+                        }
                     }
-
                 }
             }
             else
@@ -64,6 +69,7 @@ namespace impicched_graficas
                 if (tentativi <= 0)
                 {
                     MessageBox.Show("hai esaurito le vite hai perso");
+                    Application.Exit();
                 }
             }
             vite.Text = tentativi.ToString();
@@ -103,44 +109,126 @@ namespace impicched_graficas
 
         private void cibi_Click(object sender, EventArgs e)
         {
+            invio.Enabled = true;
+            button1.Enabled = true;
+            invio.Visible = true;
+            button1.Visible = true;
+            lista.Visible = true;
+            vite.Visible = true;
+            button3.Enabled = true;
+            button3.Visible = true;
+            label2.Visible = true;
+            button4.Enabled = true;
+            button4.Visible = true;
             tentativi = 8;
             lettura("cibi.txt", 8);
             vite.Text = "i tentativi sono :" + tentativi.ToString();
+            label4.Text = parolaScelta.Length.ToString();
         }
 
         private void animali_Click(object sender, EventArgs e)
         {
+            invio.Enabled = true;
+            button1.Enabled = true;
+            invio.Visible = true;
+            button1.Visible = true;
+            lista.Visible = true;
+            vite.Visible = true;
+            button3.Enabled = true;
+            button3.Visible = true;
+            label2.Visible = true;
+            button4.Enabled = true;
+            button4.Visible = true;
+            label3.Visible = true;
+            punteggio_label.Visible = true;
             tentativi = 8;
             lettura("animali.txt", 8);
             vite.Text = "i tentativi sono :" + tentativi.ToString();
+            label4.Text = parolaScelta.Length.ToString();
         }
 
         private void lavori_Click(object sender, EventArgs e)
         {
+            invio.Enabled = true;
+            button1.Enabled = true;
+            invio.Visible = true;
+            button1.Visible = true;
+            lista.Visible = true;
+            vite.Visible = true;
+            button3.Enabled = true;
+            button3.Visible = true;
+            label2.Visible = true;
+            button4.Enabled = true;
+            button4.Visible = true;
+            label3.Visible = true;
+            punteggio_label.Visible = true;
             tentativi = 8;
             lettura("lavori.txt", 8);
             vite.Text = "i tentativi sono :" + tentativi.ToString();
+            label4.Text = parolaScelta.Length.ToString();
         }
 
         private void facile_Click_1(object sender, EventArgs e)
         {
+            invio.Enabled = true;
+            button1.Enabled = true;
+            invio.Visible = true;
+            button1.Visible = true;
+            lista.Visible = true;
+            vite.Visible = true;
+            button3.Enabled = true;
+            button3.Visible = true;
+            label2.Visible = true;
+            button4.Enabled = true;
+            button4.Visible = true;
+            label3.Visible = true;
+            punteggio_label.Visible = true;
             tentativi = 15;
             lettura("parole_semplici.txt", 15);
             vite.Text = "i tentativi sono :" + tentativi.ToString();
+            label4.Text = parolaScelta.Length.ToString();
         }
 
         private void medio_Click_1(object sender, EventArgs e)
         {
+            invio.Enabled = true;
+            button1.Enabled = true;
+            invio.Visible = true;
+            button1.Visible = true;
+            lista.Visible = true;
+            vite.Visible = true;
+            button3.Enabled = true;
+            button3.Visible = true;
+            label2.Visible = true;
+            button4.Enabled = true;
+            button4.Visible = true;
+            label3.Visible = true;
+            punteggio_label.Visible = true;
             tentativi = 10;
             lettura("parole_medie.txt", 10);
             vite.Text = "i tentativi sono :" + tentativi.ToString();
+            label4.Text = parolaScelta.Length.ToString();
         }
 
         private void difficile_Click_1(object sender, EventArgs e)
         {
+            invio.Enabled = true;
+            button1.Enabled = true;
+            invio.Visible = true;
+            button1.Visible = true;
+            lista.Visible = true;
+            vite.Visible = true;
+            button3.Enabled = true;
+            button3.Visible = true;
+            label2.Visible = true;
+            button4.Enabled = true;
+            button4.Visible = true;
+            label3.Visible = true;
+            punteggio_label.Visible = true;
             tentativi = 5;
             lettura("parole_difficili.txt", 5);
             vite.Text = "i tentativi sono :" + tentativi.ToString();
+            label4.Text = parolaScelta.Length.ToString();
 
         }
 
@@ -153,9 +241,11 @@ namespace impicched_graficas
         }
         private void invio_Click(object sender, EventArgs e)
         {
+
             f = lettera.Text[0];
             lettera_ind();
             lista.Items.Add(lettera.Text);
+
 
         }
 
@@ -175,11 +265,14 @@ namespace impicched_graficas
         private void button4_Click(object sender, EventArgs e)
         {
             lista.Items.Clear();
+            parola_nascosta.Text = "nuova parola in corso\n" +
+                    "scegliere il nuovo argomento";
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (jollyUsato == 1)
+            if (jollyUsato >= 1)
             {
                 jollyUsato--;
                 Random rnd = new Random();
@@ -204,6 +297,43 @@ namespace impicched_graficas
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            invio.Enabled = false;
+            button1.Enabled = false;
+            invio.Visible = false;
+            button1.Visible = false;
+            lista.Visible = false;
+            vite.Visible = false;
+            button3.Enabled = false;
+            button3.Visible = false;
+            label2.Visible = false;
+            button4.Enabled = false;
+            button4.Visible = false;
+            label3.Visible = false;
+            punteggio_label.Visible = false;
+        }
+
+        private void punteggio_label_Click(object sender, EventArgs e)
         {
 
         }
